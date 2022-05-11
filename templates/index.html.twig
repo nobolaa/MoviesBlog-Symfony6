@@ -5,7 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    <h1>
-        {{title}}
+    <h1>Globarl variables: </h1>
+    Page: {{ _self }}
+    Charset: {{ _charset }}
+    Author: {{ author }}
+    
+
+    <h1>Movies: </h1>
+        {% for movie in movies %}
+            <p>{{movie}}</p>
+        {% endfor %}
     </h1>
 {% endblock %}
