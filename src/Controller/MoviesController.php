@@ -35,7 +35,7 @@ class MoviesController extends AbstractController
                                ORDER BY id DESC;*/        
         $movies = $repository->findOneBy(['releaseYear' => 2008, 'title' => 'The Dark Kinght'], ['id' => 'DESC']);
 
-        //find() - SELECT COUNT() FROM movies WHERE id = 5;
+        //count() - SELECT COUNT() FROM movies WHERE id = 5;
         $movies = $repository->count(['id' => 10]);
 
         $movies = $repository->getClassName();
