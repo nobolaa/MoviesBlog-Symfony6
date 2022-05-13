@@ -12,8 +12,7 @@
     
 
     <h1>Movies: </h1>
-        {% for movie in movies %}
-            <p>{{movie}}</p>
-        {% endfor %}
-    </h1>
+    {% for movie in movies %}
+        <p>{{movie.title}}</p>
+    {% endfor %}
 {% endblock %}
