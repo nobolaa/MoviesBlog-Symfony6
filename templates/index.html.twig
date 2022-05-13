@@ -5,14 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="bg-blue-500 text-2xl  text-center font-bold">Globarl variables: </h1>
-    Page: {{ _self }}
-    Charset: {{ _charset }}
-    Author: {{ author }}
-    
-
-    <h1>Movies: </h1>
+    <h1 class="bg-blue-500 text-2xl  text-center font-bold">Movies: </h1>
     {% for movie in movies %}
         <p>{{movie.title}}</p>
+        <img src="{{ asset(movie.imagePath)}}"/>
     {% endfor %}
 {% endblock %}
