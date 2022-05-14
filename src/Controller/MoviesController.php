@@ -24,6 +24,6 @@ class MoviesController extends AbstractController
         //findAll() - SELECT * FROM movies;
         $movies = $repository->findAll();
 
-        return $this->render('index.html.twig', compact('movies'));
+        return $this->render('movies/index.html.twig', compact('movies'));
     }
 }
