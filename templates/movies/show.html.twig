@@ -3,7 +3,7 @@
 {% block body %}
     <div class="sm:w-3/5 w-4/5 mx-auto">
         <h1 class="pt-20 sm:text-5xl md:text-7xl text-4xl font-bold text-center">
-            Joker
+            {{ movie.title }}
         </h1>
 
         <div class="py-10 text-center">
@@ -21,21 +21,13 @@
         </div>
 
         <img
-                src="https://cdn.pixabay.com/photo/2020/06/10/12/58/joker-5282593_1280.jpg"
+                src="/{{ movie.imagePath }}"
                 class="rounded-xl w-full shadow-xl"
                 alt="Icon of Code With Dary"
         />
 
         <p class="text-xl py-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, deserunt! Inventore debitis rerum quam voluptate, accusamus aliquam aut aliquid, quod, molestiae sint natus minus nostrum eligendi? Neque aliquid deleniti sit?
-        </p>
-
-        <p class="text-xl py-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, deserunt! Inventore debitis rerum quam voluptate, accusamus aliquam aut aliquid, quod, molestiae sint natus minus nostrum eligendi? Neque aliquid deleniti sit?
-        </p>
-
-        <p class="text-xl py-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, deserunt! Inventore debitis rerum quam voluptate, accusamus aliquam aut aliquid, quod, molestiae sint natus minus nostrum eligendi? Neque aliquid deleniti sit?
+            {{ movie.description }}
         </p>
     </div>
 {% endblock %}
