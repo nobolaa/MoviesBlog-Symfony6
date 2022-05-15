@@ -13,12 +13,18 @@
         </div>
     </div>
 
+    <div class="mx-auto w-4/5 my-8">
+        <a href="/movies/create" class="uppercase border border-gray-500 text-lg py-4 px-6 rounded bg-gray-800 text-white">
+            Create New Movie
+        </a>
+    </div>
+
     <div class="md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 ">
         <!-- Blog Item -->
         {% for movie in movies %}
             <div class="text-center pt-8 pb-4">
                 <img
-                        src="/{{ movie.imagePath }}"
+                        src="{{ movie.imagePath }}"
                         alt=""
                         class="shadow-xl rounded-md">
 

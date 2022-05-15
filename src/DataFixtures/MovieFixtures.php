@@ -14,7 +14,7 @@ class MovieFixtures extends Fixture
         $movie->setTitle('The Dark Knight');
         $movie->setReleaseYear(2008);
         $movie->setDescription('This is the description of The Dark Knight');
-        $movie->setImagePath('build/images/batman.b7b9a649.jpg');
+        $movie->setImagePath('/build/images/batman.b7b9a649.jpg');
         
         $movie->addActor($this->getReference('actor_1'));
         $movie->addActor($this->getReference('actor_2'));
@@ -25,7 +25,7 @@ class MovieFixtures extends Fixture
         $movie2->setTitle('Avengers: Endgame');
         $movie2->setReleaseYear(2019);
         $movie2->setDescription('This is the description of Avengers: Endgame');
-        $movie2->setImagePath('build/images/captain-america.f72e206a.jpg');
+        $movie2->setImagePath('/build/images/captain-america.f72e206a.jpg');
                 
         $movie2->addActor($this->getReference('actor_3'));
         $movie2->addActor($this->getReference('actor_4'));
