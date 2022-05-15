@@ -121,4 +121,22 @@ class MoviesController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    #[Route('/movies/delete/{id}', methods:['GET', 'DELETE'], name:'delete_movie')]
+    public function delete($id): Response
+    {
+        $movie = $this->movieRepository->find($id);
+
+        if($movie->getImagePath()){
+            $oldPath = $this->getParameter('kernel.project_dir') . '/public' . $movie->getImagePath();
+            if(file_exists($oldPath)){    
+                unlink($oldPath);
+            }
+        }
+
+        $this->em->remove($movie);
+        $this->em->flush();
+
+        return $this->redirectToRoute('movies'); 
+    }
 }
